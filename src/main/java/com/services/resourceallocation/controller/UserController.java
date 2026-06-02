@@ -1,5 +1,9 @@
 package com.services.resourceallocation.controller;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -15,13 +19,9 @@ import com.services.resourceallocation.repository.UserRepository;
 import com.services.resourceallocation.service.LoginService;
 import com.services.resourceallocation.service.RegisterService;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "*")
 public class UserController {
     
     @Autowired
