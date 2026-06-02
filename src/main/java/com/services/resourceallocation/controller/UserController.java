@@ -34,6 +34,11 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
+    @GetMapping("/")
+    public String home() {
+        return "Resource Allocation Backend Running Successfully";
+    }
+
     @PostMapping("/register")
     public ResponseEntity<?> registerUser(@RequestBody User user) {
        try {
